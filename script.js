@@ -26,7 +26,7 @@ function addActivity(text){
    let activities = document.getElementById("activities");
    let p = document.createElement('p');
    p.innerText = text;
-   p.setAttribute("class"," p-4 rounded-md bg-slate-200 mb-6")
+   p.setAttribute("class"," p-4 rounded-md bg-slate-200 mb-6 text-sm")
    activities.appendChild(p);
 }
 
