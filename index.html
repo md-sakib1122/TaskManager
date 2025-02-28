@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <script defer src="script.js"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body id="body" class=" bg-slate-200">
+   <header class=" bg-white flex justify-between p-2 rounded-md max-w-[1300px] m-auto mt-6">
+       <div class=" flex items-center cursor-pointer gap-2">
+          <img class=" w-[51px] h-[51px]" src="assets/logo.png" alt="logo">
+          <h1 class=" text-3xl">Dev<span class=" font-bold">Board</span></h1> 
+       </div>
+
+       <div class=" flex items-center gap-4">
+          <div class="flex items-center gap-2 bg-slate-200 rounded-full px-2 py-1 cursor-pointer">
+             <img class="w-[30px] h-[30px]" src="assets/checkbox.png" alt="checkbox">
+             <span id="incr" class="text-3xl font-bold">23</span>
+          </div>
+          <div id="changeBg">
+             <img class=" cursor-pointer" src="assets/theme-btn.png" alt="theme-btn">
+          </div>
+       </div>
+   </header>
+
+   <main class=" max-w-[1300px] m-auto mt-4 mb-10">
+      <section class=" grid grid-cols-4 gap-4">
+          <div class=" bg-white p-4 col-span-3 rounded-md ">
+            <!-- upper container start -->
+             <div class="grid grid-cols-4 h-[120px] gap-3">
+                <!--  -->
+                 <div class="flex items-center bg-slate-200 rounded-md gap-3 p-6">
+                    <div class=" bg-white rounded-full p-3">
+                        <img class="w-[30px] h-[30px]" src="assets/checkbox.png" alt="checkbox">
+                    </div>
+                    <div>
+                        <p class="font-semibold">Task Assigned </p>
+                        <h1 id="taskCount"  class=" font-bold text-2xl">06</h1>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class=" flex col-span-2 px-7 py-5 items-center gap-3 bg-blue-600 rounded-md cursor-pointer">
+                    <div>
+                        <img src="assets/board.png" alt="">
+                    </div>
+                    <p id="question" class=" text-xl text-white w-1/2">Discover Something New Today!</p>
+                 </div>
+                 <!--  -->
+                 <div class="flex items-center p-6 bg-slate-200 gap-3 rounded-md">
+                    <div>
+                        <img class="w-[30px] h-[30px]" src="assets/calender.png" alt="checkbox">
+                    </div>
+                    <div>
+                        <p id="day"  class=" font-semibold">wed ,</p>
+                        <h1 id ="date" class=" font-bold">jul 28 2025</h1>
+                    </div>
+                 </div>
+                 <!--  -->
+             </div>
+
+             <!-- upper container end, lower container start -->
+             
+             <div class=" bg-whit mt-8 grid grid-cols-3 gap-6">
+                 <!--  -->
+                 <div class=" bg-slate-200 p-4 rounded-md">
+                    <p class="px-3 py-1 bg-white rounded-md inline-block">ShopEase</p>
+                    <h1 id="shoptext" class=" text-xl font-bold mt-3">Fix Mobile Button Issue</h1>
+                    <p class=" p-3 bg-white text-slate-700 rounded-md mt-3 text-sm">
+                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works. 
+                    </p>
+                    <div class="flex items-center justify-between mt-4">
+                        <div>
+                            <p>Deadline</p>
+                            <h3 class="font-bold">21 March 2025</h3>
+                        </div>
+                        <button id="shopBtn" class="p-2 px-3 bg-blue-600 text-white rounded-md  cursor-pointer">Completed</button>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class=" bg-slate-200 p-4 rounded-md">
+                    <p class="px-3 py-1 bg-white rounded-md inline-block">CloudSync</p>
+                    <h1 id="cloudtext" class=" text-xl font-bold mt-3">Add Dark Mode</h1>
+                    <p class=" p-3 bg-white text-slate-700 rounded-md mt-3 text-sm">
+                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works. 
+                    </p>
+                    <div class="flex items-center justify-between mt-4">
+                        <div>
+                            <p>Deadline</p>
+                            <h3 class="font-bold">21 March 2025</h3>
+                        </div>
+                        <button id="cloudBtn" class="p-2 px-3 bg-blue-600 text-white rounded-md cursor-pointer">Completed</button>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class=" bg-slate-200 p-4 rounded-md">
+                    <p class="px-3 py-1 bg-white rounded-md inline-block">SwiftPay </p>
+                    <h1  id="swifttext" class=" text-xl font-bold mt-3">Optimize  Home page </h1>
+                    <p class=" p-3 bg-white text-slate-700 rounded-md mt-3 text-sm">
+                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works. 
+                    </p>
+                    <div class="flex items-center justify-between mt-4">
+                        <div>
+                            <p>Deadline</p>
+                            <h3 class="font-bold">21 March 2025</h3>
+                        </div>
+                        <button id="swiftBtn" class="p-2 px-3 bg-blue-600 text-white rounded-md  cursor-pointer ">Completed</button>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class=" bg-slate-200 p-4 rounded-md">
+                    <p class="px-3 py-1 bg-white rounded-md inline-block">Meta</p>
+                    <h1 id="metatext" class=" text-xl font-bold mt-3">Add new emoji 🤲</h1>
+                    <p class=" p-3 bg-white text-slate-700 rounded-md mt-3 text-sm">
+                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works. 
+                    </p>
+                    <div class="flex items-center justify-between mt-4">
+                        <div>
+                            <p>Deadline</p>
+                            <h3 class="font-bold">21 March 2025</h3>
+                        </div>
+                        <button id="metaBtn" class="p-2 px-3 bg-blue-600 text-white rounded-md  cursor-pointer">Completed</button>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class=" bg-slate-200 p-4 rounded-md">
+                    <p class="px-3 py-1 bg-white rounded-md inline-block">Google LLC</p>
+                    <h1 id="googletext" class=" text-xl font-bold mt-3">Integrate OpenAI API </h1>
+                    <p class=" p-3 bg-white text-slate-700 rounded-md mt-3 text-sm">
+                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works. 
+                    </p>
+                    <div class="flex items-center justify-between mt-4">
+                        <div>
+                            <p>Deadline</p>
+                            <h3 class="font-bold">21 March 2025</h3>
+                        </div>
+                        <button id="googleBtn" class="p-2 px-3 bg-blue-600 text-white rounded-md  cursor-pointer">Completed</button>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class=" bg-slate-200 p-4 rounded-md">
+                    <p class="px-3 py-1 bg-white rounded-md inline-block">Glassdoar</p>
+                    <h1 id="glasstext" class=" text-xl font-bold mt-3">Improve Job searching</h1>
+                    <p class=" p-3 bg-white text-slate-700 rounded-md mt-3 text-sm">
+                        Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works. 
+                    </p>
+                    <div class="flex items-center justify-between mt-4">
+                        <div>
+                            <p>Deadline</p>
+                            <h3 class="font-bold">21 March 2025</h3>
+                        </div>
+                        <button id="glassBtn" class="p-2 px-3 bg-blue-600 text-white rounded-md  cursor-pointer">Completed</button>
+                    </div>
+                 </div>
+                 <!--  -->
+             </div>
+             <!-- lower container end -->
+
+          </div>
+
+          <div class=" bg-white p-4 rounded-md">
+             <div class=" flex flex-col justify-center items-center">
+                 <div class="flex items-center gap-2">
+                    <img src="assets/activity.png" alt="activity">
+                    <h2 class=" font-bold text-xl">Activity Log</h2>
+                 </div>
+                 <button id="clear-btn" class="p-2 mt-4 px-5 cursor-pointer font-medium bg-blue-600 text-white rounded-md">Clear Activity</button>
+             </div>
+             <div id="activities"  class=" mt-9">
+             </div>
+          </div>
+      </section>
+   </main>
+</body>
+</html>
